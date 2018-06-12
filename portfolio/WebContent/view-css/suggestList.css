@@ -1,0 +1,35 @@
+@CHARSET "UTF-8";
+
+.board_title {
+    width:30%;
+    border-bottom:1px solid;
+    margin:50px 24% 20px 24%;
+    padding:0 30px;
+    font-size:1em;
+    color:#666;
+}
+
+.date {
+    font-size:22px;
+    margin-right:37%;
+    margin-bottom:10px;
+    text-align:center;
+}
+form {
+    text-align:center;
+    margin-right:100px;
+}
+
+.submit {
+    position:absolute;
+    height:30px;
+    margin:10px;
+}
+
+#suggestTable {
+	border-bottom:1px dotted;
+	width:1000px;
+	margin-left: 400px;
+	margin-top: 30px;
+	padding-bottom:10px;
+}

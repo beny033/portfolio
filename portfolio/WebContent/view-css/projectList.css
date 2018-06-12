@@ -1,0 +1,61 @@
+@CHARSET "UTF-8";
+
+th {
+    padding:0 18px;
+    line-height:40px;
+}
+td {
+    text-align:center;
+}
+
+.board_title {
+    width:30%;
+    border-bottom:1px solid;
+    margin:50px 24%;
+    padding:0 30px;
+    font-size:1em;
+    color:#666;
+}
+
+table {
+    width:55%;
+    margin:0 22%;
+}
+
+#line {
+    background-color:#8080806e;
+}
+
+#text>.write {
+    position:absolute;
+    color:black;
+    font-size:18px;
+    margin:30px 46%;
+    width:54px;
+}
+
+#writebtn {
+    width:64px;
+	height:33px;
+	font-size:13px;
+}
+
+#select {
+	height:23px;
+	position:relative;
+	left:15px;
+}
+
+#serch {
+	position:absolute;
+	right:450px;
+	top:310px;
+}
+
+#serchText {
+	height:16px;
+}
+#submit {
+	height:27px;
+	margin-left:6px;
+}

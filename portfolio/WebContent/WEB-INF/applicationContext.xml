@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop
+	 http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+    http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/util
+     http://www.springframework.org/schema/util/spring-util-3.0.xsd
+    http://www.springframework.org/schema/tx
+     http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+	
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+		<property name="url" value="jdbc:mysql://localhost:3306/project"/>
+		<property name="username" value="root"/>
+		<property name="password" value="9217"/>
+	</bean>
+	
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+		
+	<bean id="memberDAO" class="com.bong.dao.MemberDAOImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"/>
+	</bean>	
+	
+	<bean id="projectDAO" class="com.bong.dao.ProjectDAO">
+		<property name="jdbcTemplate" ref="jdbcTemplate"/>
+	</bean>
+	
+	<bean id="freeBoardDAO" class="com.bong.freeboard.dao.FreeBoardDAOImpl"> 
+		<property name="jdbcTemplate" ref="jdbcTemplate"/>
+	</bean>
+
+</beans>

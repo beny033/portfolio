@@ -1,0 +1,44 @@
+@CHARSET "UTF-8";
+
+body {margin:0;}
+
+#header{
+  background-color:gray;
+  line-height:100px;
+}
+a{
+  text-decoration:none;
+}
+#header>.top>a {
+  position:absolute;
+  font-size:30px;
+  margin-top:37px;
+  color:white;
+  height:37px;
+  
+}
+#menu>a {
+  padding:5px;
+  color:white;
+}
+#menu {
+  width:105%;
+  position:relative;
+  text-align:right;
+  bottom:20px;
+  font-size:14px;
+}
+#board {
+  margin-left:125px;
+}
+#board>a {
+  position:relative;
+  margin:140px;
+  top:18px;
+  color:white;
+}
+
+#header{
+  text-align:center;
+  padding-right:121px;
+}

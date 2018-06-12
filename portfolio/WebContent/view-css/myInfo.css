@@ -1,0 +1,43 @@
+@CHARSET "UTF-8";
+
+h2 {
+    border-bottom:1px solid gray;
+    color:#666;
+    width:500px;
+    line-height:60px;
+    padding-left:50px;
+}
+
+.text {
+    font-size:14px;
+}
+
+#info {
+    width:100%;
+    margin:100px 33%;;
+}
+
+th,td {
+    padding:8px;
+}
+
+th {
+    text-align:left;
+}
+
+td {
+    padding-left:15px;
+}
+
+
+#buttons {
+    font-size:20px;
+    margin: 20px 90px;
+}
+
+#submit,#backbtn {
+    height:35px;
+    width:70px;
+    font-size:14px;
+    margin-left:20px;
+}

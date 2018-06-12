@@ -1,0 +1,88 @@
+@CHARSET "UTF-8";
+
+.text {
+	line-height: 1.8;
+	font-size: 1em;
+	padding: 10px;
+	color: #666;
+	text-align: justify;
+}
+
+.hentry {
+	width: 740px;
+	margin: 0 auto;
+	padding: 40px 35px;
+}
+
+
+h2#board_title {
+	margin-top: 20px;
+	padding: 0 0 5px 0;
+}
+
+#write_title {
+	text-align: center;
+	margin: 10px 0 0 0;
+	padding: 5px;
+	border-top: 1px solid #bbbbbb;
+	border-bottom: 1px solid #bbbbbb;
+	background-color: #eeeeee;
+}
+
+table {
+	border-collapse: collapse;
+	margin: 0 auto;
+	width: 100%;
+}
+
+ td {
+	border-bottom: 1px solid #dddddd;
+	padding: 10px;
+}
+
+td.col1 {
+	width: 150px;
+	text-align: center;
+	border-right: 1px solid #cccccc;
+}
+
+td.col2 {
+	padding: 5px 0 0 10px;
+}
+
+#writer input {
+	width: 100px;
+	height: 16px;
+	border: 1px solid #9E9E9E;
+}
+
+#subject input {
+	width: 550px;
+	height: 16px;
+}
+
+#content textarea {
+	width: 550px;
+	height: 200px;
+	margin: 5px 5px 5px 0;
+}
+
+#buttons {
+	text-align: right;
+	margin: 10px 10px 0 0;
+}
+
+#buttons>a {
+	color: black;
+	padding:8px;
+}
+
+#selectStatus {
+	height:30px;
+}
+
+button{
+	width:49px;
+	height:28px;
+	font-size:13px;
+}

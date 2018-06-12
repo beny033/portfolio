@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:aop="http://www.springframework.org/schema/aop"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:tx="http://www.springframework.org/schema/tx"
+  xmlns:util="http://www.springframework.org/schema/util"
+  xsi:schemaLocation="http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util-3.0.xsd
+    http://www.springframework.org/schema/tx 
+    http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+	
+	<bean name="/loginForm.htm" class="com.bong.member.formcontroller.LoginFormController"/>
+	<bean name="/joinForm.htm" class="com.bong.member.formcontroller.JoinFormController"/>
+	<bean name="/memberModifyForm.htm" class="com.bong.member.formcontroller.MemberModifyFormController"/>
+	<bean name="/memberDeleteForm.htm" class="com.bong.member.formcontroller.MemberDeleteFormController"/>
+	<bean name="/myInfoUpdateForm.htm" class="com.bong.member.formcontroller.MyInfoUpdateFormController"/>
+ 	<bean name="/joinCheck.htm" class="com.bong.member.login.JoinCheckController"/>
+	<bean name="/loginError.htm" class="com.bong.member.login.LoginErrorController"/>
+	<bean name="/logOut.htm" class="com.bong.member.login.LogOutController"/>
+	<bean name="/myInfo.htm" class="com.bong.member.memberinfo.MyInfoController"/>
+	
+	<bean name="/memberList.htm" class="com.bong.member.memberinfo.MemberListController">
+	  <property name="memberDAO" ref="memberDAO"/>
+	</bean>
+	
+	<bean name="/memberModify.htm" class="com.bong.member.memberinfo.MemberModifyController">
+		<property name="memberDAO" ref="memberDAO"/>
+	</bean>
+
+	<bean name="/myInfoUpdate.htm" class="com.bong.member.memberinfo.MyInfoUpdateController">
+		<property name="memberDAO" ref="memberDAO"/>
+	</bean>	
+	
+	<bean name="/memberDelete.htm" class="com.bong.member.memberinfo.MemberDeleteController">
+	  <property name="memberDAO" ref="memberDAO"/>
+	</bean>
+
+	<bean name="/descList.htm" class="com.bong.member.memberinfo.DescListController">
+	  <property name="memberDAO" ref="memberDAO"/>
+	</bean>
+	
+	<bean name="/suggestList.htm" class="com.bong.member.memberinfo.SuggestList">
+		<property name="memberDAO" ref="memberDAO"/>
+	</bean>
+	
+	<bean name="/suggestWrite.htm" class="com.bong.member.memberinfo.SuggestWrite">
+		<property name="memberDAO" ref="memberDAO"/>
+	</bean>
+
+	<bean name="/projectList.htm" class="com.bong.project.projectinfo.ProjectListController">
+		<property name="projectDAO" ref="projectDAO"/>
+	</bean>
+	
+	<bean name="/projectWriteForm.htm" class="com.bong.projectboard.formcontroller.ProjectWriteFormController"/>
+	<bean name="/projectModifyForm.htm" class="com.bong.projectboard.formcontroller.ProjectModifyFormController"/>
+	<bean name="/projectDeleteForm.htm" class="com.bong.projectboard.formcontroller.ProjectDeleteFormController"/>
+	
+	<bean name="/countPlus.htm" class="com.bong.project.projectinfo.CountPlus">
+		<property name="projectDAO" ref="projectDAO"/>
+	</bean>
+	
+	<bean name="/projectWrite.htm" class="com.bong.project.projectinfo.ProjectWriteController"	>
+		<property name="projectDAO" ref="projectDAO"/>
+	</bean>
+	
+	<bean name="/projectModify.htm" class="com.bong.project.projectinfo.ProjectModifyController">
+		<property name="projectDAO" ref="projectDAO"/>
+	</bean>
+	
+	<bean name="/projectDelete.htm" class="com.bong.project.projectinfo.ProjectDeleteController">
+		<property name="projectDAO" ref="projectDAO"/>	
+	</bean>
+	
+	<bean name="/freeBoardList.htm" class="com.bong.freeboard.boardinfo.FreeBoardList">
+		<property name="freeBoardDAO" ref="freeBoardDAO"/>
+	</bean>
+
+	<bean name="/freeBoardWriteForm.htm" class="com.bong.freeboard.formcontroller.FreeBoardWriteForm"/>
+	<bean name="/freeBoardWrite.htm" class="com.bong.freeboard.boardinfo.FreeBoardWrite">
+		<property name="freeBoardDAO" ref="freeBoardDAO"/>
+	</bean>
+	
+ 	<bean name="/free_countPlus.htm" class="com.bong.freeboard.boardinfo.FreeBoardCountPlus">
+		<property name="freeBoardDAO" ref="freeBoardDAO"/>
+	</bean>
+	
+	<bean name="/boardPasswordCheck.htm" class="com.bong.freeboard.formcontroller.FreeBoardPasswordCheck" />
+	<bean name="/freeBoardModifyForm.htm" class="com.bong.freeboard.formcontroller.FreeBoardModifyForm" />
+	<bean name="/freeBoardModify.htm" class="com.bong.freeboard.boardinfo.FreeBoardModify">
+		<property name="freeBoardDAO" ref="freeBoardDAO"/>
+	</bean>
+	
+	<bean name="/boardDeletePasswordCheck.htm" class="com.bong.freeboard.formcontroller.FreeBoardDeletePasswordCheck"/>
+	<bean name="/freeBoardDelete.htm" class="com.bong.freeboard.boardinfo.FreeBoardDelete">
+		<property name="freeBoardDAO" ref="freeBoardDAO"/>
+	</bean>
+	
+	<bean name="/searchResult.htm" class="com.bong.freeboard.boardinfo.FreeBoardSearchResult">
+		<property name="freeBoardDAO" ref="freeBoardDAO"/>
+	</bean>
+	
+
+		
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+		<property name="prefix" value="/WEB-INF/view/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+</beans>
+
+
